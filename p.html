@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The World Travel Guy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    header {
+  position: relative;
+  background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  z-index: 1;
+}
+
+.hero-text video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+nav div h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+      background: #ff9800;
+      color: black;
+    }
+    .hero-text video 
+        {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1;
+        }
+
+   
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+    }
+    footer {
+  background-color: #111;
+  color: #ddd;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-media a {
+  color: #ddd;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #ff9800;
+}
+
+.footer-links {
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: #ff9800;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+footer p {
+  margin: 0.8rem 0;
+}
+
+@media (max-width: 768px) {
+  .footer-note {
+    font-size: 0.8rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <nav>
+        <div>
+          <h2>Ghumo.com</h2>
+        </div>
+        <ul>
+          <li><a href="p.html">Home</a></li>
+          <li><a href="k.html">Blog</a></li>
+          <li><a href="ind.html">About</a></li>
+        </ul>
+      </nav>
+  <header>
+ 
+    <div class="hero-text">
+        <video autoplay muted loop>
+            <source src="NATURE CINEMATIC Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      <h1>Explore. Dream. Discover.</h1>
+    
+      <p>This is a world travel blog featuring beautiful destinations, new experiences, and hidden places around the globe.</p>
+      <a href="#" class="button">Start Exploring</a>
+    </div>
+  </header>
+  <script>
+	
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	
+
+
+</script>
+<footer><i>
+    <div class="footer-content">
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fas fa-rss"></i></a>
+      </div>
+      <p>&copy; Ghumo 2025</p>
+      <div class="footer-links">
+        <a href="#">Affiliate Disclosures</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms Of Use</a>
+      </div>
+      <p class="footer-note">
+        Some of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these links, I get a small commission at no extra cost to you. As an affiliate, I only recommend products and services that I feel are high quality and helpful to my readers. Thanks for your support.
+      </p>
+    </div>
+</i>
+  </footer>
+  
+
+</body>
+</html>
